@@ -1,6 +1,7 @@
 // import localFont from "next/font/local";
 import '@styles/globals.css'
 import Navbar from './components/Navbar';
+import { SessionProvider } from 'next-auth/react';
 
 export const metadata = {
   title: "Promptum",
@@ -14,10 +15,12 @@ export default function RootLayout({ children }) {
         <div className="main">
           <div className="gradient"/>
         </div>
-        <main className="app">
-          <Navbar />
-          {children}
-        </main>
+        <SessionProvider>
+          <main className="app">
+            <Navbar />
+            {children}
+          </main>
+        </SessionProvider>
       </body>
     </html>
   );
