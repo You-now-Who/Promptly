@@ -13,7 +13,7 @@ const CreatePrompt = ({ session }) => {
     // const { data: session } = useSession();
     const router = useRouter();
 
-    // console.log(session?.user?.id)
+    // console.log(session?.user)
 
     const createPrompt = async (e) => {
         // e.preventDefault();
