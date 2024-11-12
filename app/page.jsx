@@ -2,6 +2,7 @@ import Feed from "./components/Feed";
 import Link from "next/link";
 
 export default function Home() {
+  console.log("Home");
   return (
     <>
       <section className="w-full flex-center flex-col">
